@@ -10,7 +10,6 @@ import random
 from asyncio import sleep
 from colorama import Fore
 from colorama import Style
-from faker import Faker
 from aiogram import Bot, Dispatcher, executor, types
 from bs4 import BeautifulSoup
 
