@@ -34,8 +34,8 @@ session = requests.session()
 
 
 #===========[Start]==========#
-@iniciar.message_handler(commands=['start'], commands_prefix=comand)
-    async def start(message: types.Message):
+@llamadodelbot.message_handler(commands=['start','iniciar'], commands_prefix=ejecucion)
+async def helpstr(message: types.Message):
     
     await message.answer_chat_action("typing")
     
