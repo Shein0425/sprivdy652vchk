@@ -58,7 +58,7 @@ async def helpstr(message: types.Message):
   
 #===========[CMDS]==========#
 @iniciar.message_handler(commands=['cmds'], commands_prefix=comand)
-    async def cmds(message: types.Message):
+async def cmds(message: types.Message):
     await message.reply(f"""
 ==================
 LISTA DE COMANDOS
@@ -69,7 +69,7 @@ LISTA DE COMANDOS
 
 
 @iniciar.message_handler(commands=['info'], commands_prefix=comand)
-    async def helpstr(message: types.Message):
+async def helpstr(message: types.Message):
     await message.answer_chat_action("typing")
     await message.reply(f""" 
 - - - - - - - - - - - - - - - - - - - - 
@@ -88,7 +88,7 @@ LISTA DE COMANDOS
 
 #===========[ Sk Check]==========#
 @iniciar.message_handler(commands= ["sk"], commands_prefix=comand)
-    async def rnd(message: types.Message):
+async def rnd(message: types.Message):
     await message.answer_chat_action("typing")
     key = message.text[len('/sk '):]
     inciodeltiempo = time.perf_counter()
@@ -187,7 +187,7 @@ LISTA DE COMANDOS
 
 #===========[Extrapolar Cc]==========#
 @iniciar.message_handler(commands= ["extra"], commands_prefix=comand)
-    async def rnd(message: types.Message):
+async def rnd(message: types.Message):
 
     inciodeltiempo = time.perf_counter()
     await message.answer_chat_action("typing")
@@ -220,7 +220,7 @@ Time : {finaldeltime - inciodeltiempo:0.2} segundos </b>
 #===========[Gate Sprock Chk]==========#
 
 @iniciar.message_handler(commands= ["spk"], commands_prefix=comand)
-    async def chk(message: types.Message):
+async def chk(message: types.Message):
     inciodeltiempo = time.perf_counter()
 
     await message.answer_chat_action("typing")
